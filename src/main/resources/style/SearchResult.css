@@ -1,0 +1,52 @@
+.title{
+    -fx-background-color: rgba(192, 208, 223, 0.52);
+}
+.titleButton{
+    -fx-background-size: 13;
+    -fx-background-position: center;
+    -fx-background-repeat:no-repeat;
+}
+#minimize{
+    -fx-background-image: url(../icon/winMinimize.png);
+}
+#close{
+    -fx-background-image: url(../icon/winClose.png);
+    -fx-background-radius: 0px 15px 0px 0px;
+}
+.titleButton:hover{
+    -fx-background-size: 15;
+    -fx-background-color: rgba(192, 208, 223, 1);
+}
+#searchText{
+    -fx-border-radius: 9px 0px 0px 9px;
+    -fx-border-width: 2px;
+    -fx-border-color: rgb(152, 152, 152);
+    -fx-background-radius: 10px 0px 0px 10px;
+    -fx-background-color: rgb(255, 255, 255);
+    -fx-padding: 0px 0px 0px 15px;
+    -fx-focus-traversable: false;
+}
+#searchText:focused{
+    -fx-border-color: rgb(255,198,112);
+}
+#searchButton{
+    -fx-background-radius: 0px 9px 9px 0px;
+    -fx-background-color: rgb(255,198,112);
+    -fx-text-alignment: center;
+    -fx-border-width: 0px;
+}
+#searchButton:hover{
+    -fx-background-color: rgb(255, 193, 97);
+}
+
+#resultPane:focused{
+    -fx-border-color: rgba(200,200,200,1);
+    -fx-border-width: 0px;
+    -fx-background-insets: 0 0 0 0,0,1,2;
+    -fx-background-color: rgba(200,200,200,1);
+}
+.scroll-bar:vertical .thumb {
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 0;
+    -fx-background-color: rgb(193,193,193);
+}

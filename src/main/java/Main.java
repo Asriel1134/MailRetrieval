@@ -1,3 +1,4 @@
+import com.Controllers.IndexController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -18,13 +19,16 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/FXML/Index.fxml")));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Index.fxml"));
+        Parent root = loader.load();
+        IndexController controller = loader.getController();
         stage.setTitle("MailRetrieval");
-        stage.getIcons().add(new Image("/icon/mail.png"));
+        stage.getIcons().add(new Image("/icon/logoMini.png"));
         stage.setResizable(false);
         stage.initStyle(StageStyle.TRANSPARENT);
         stage.setScene(new Scene(root));
         stage.getScene().setFill(null);
+        controller.init();
         stage.show();
     }
 }

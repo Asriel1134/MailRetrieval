@@ -9,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox fx:id="mainBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: rgba(255,255,255,1); -fx-background-radius: 15px;" stylesheets="@../style/Index.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.IndexController">
+<VBox fx:id="mainBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: rgba(255,255,255,1); -fx-background-radius: 15px;" stylesheets="@../style/Index.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controllers.IndexController">
    <children>
       <AnchorPane fx:id="title" onMouseDragged="#dragWindow" onMouseMoved="#setDragXY" prefHeight="35.0" prefWidth="1024.0" style="-fx-background-radius: 15px 15px 0px 0px;" styleClass="title">
          <children>
@@ -28,7 +28,7 @@
                <font>
                   <Font size="16.0" />
                </font></TextField>
-            <Label id="searchButton" fx:id="searchButton" alignment="CENTER" layoutX="727.0" layoutY="509.0" prefHeight="45.0" prefWidth="108.0" text="Search" textAlignment="CENTER" textFill="WHITE">
+            <Label id="searchButton" fx:id="searchButton" alignment="CENTER" layoutX="727.0" layoutY="509.0" onMouseClicked="#search" prefHeight="45.0" prefWidth="108.0" text="Search" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Leelawadee UI" size="18.0" />
                </font>

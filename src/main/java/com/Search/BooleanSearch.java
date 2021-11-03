@@ -1,3 +1,5 @@
+package com.Search;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -7,8 +9,16 @@ import java.util.Objects;
  * @author Asriel
  */
 public class BooleanSearch {
+    HashMap<String, ArrayList<Object[]>> invertedIndex;
+
+    public BooleanSearch(){
+        invertedIndex = InvertedIndex.readInvertedIndex("src/main/resources/InvertedIndex.txt");
+    }
 
     public static void main(String[] args) {
+        String text = "beach AND fire";
+        String[] a = text.split(" AND ");
+
         HashMap<String, ArrayList<Object[]>> invertedIndex = InvertedIndex.readInvertedIndex("src/main/resources/InvertedIndex.txt");
         System.out.println(Arrays.toString(singleSearch("Order", invertedIndex)));
         System.out.println(Arrays.toString(andSearch("Order", "accessories", invertedIndex)));
@@ -17,12 +27,19 @@ public class BooleanSearch {
         System.out.println(Arrays.toString(andNotSearch( "accessories","Order", invertedIndex)));
     }
 
+    public String[] search(String searchText){
+        return singleSearch(searchText, invertedIndex);
+    }
+
     public static ArrayList<Object[]> getRecord(String word, HashMap<String, ArrayList<Object[]>> invertedIndex) {
         return invertedIndex.getOrDefault(word, null);
     }
 
     public static String[] singleSearch(String word, HashMap<String, ArrayList<Object[]>> invertedIndex){
         ArrayList<Object[]> records = getRecord(word, invertedIndex);
+        if (records == null){
+            return new String[0];
+        }
         ArrayList<String> result = new ArrayList<>();
         for (Object[] re: records){
             result.add((String) re[0]);
