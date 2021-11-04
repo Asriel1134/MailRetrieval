@@ -1,5 +1,5 @@
 # MailRetrieval
-## com.Search.InvertedIndex 倒排索引
+## InvertedIndex 倒排索引
 `倒排记录格式：词项 (文件名1;出现次数;出现位置1|出现位置2|出现位置3),`
 ### 词项处理
 ⭐仅记录邮件正文内容
@@ -46,4 +46,4 @@
   + 参数：`String fileName`：倒排记录文件。
   + 返回值：倒排记录表。
 ***
-## com.Search.BooleanSearch 布尔检索
+## BooleanSearch 布尔检索
