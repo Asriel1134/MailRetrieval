@@ -12,7 +12,7 @@ public class ResultProcessing {
     }
 
     public static HashMap<String, Integer> initFileInfo(){
-        HashMap<String, Integer> infoMap = new HashMap<>(15);
+        HashMap<String, Integer> infoMap = new HashMap<>(17);
         infoMap.put("Message-ID:", 0);
         infoMap.put("Date:", 1);
         infoMap.put("From:", 2);

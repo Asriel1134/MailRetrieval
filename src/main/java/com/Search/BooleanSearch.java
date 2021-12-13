@@ -14,7 +14,7 @@ public class BooleanSearch {
 
     public static void main(String[] args) {
         BooleanSearch booleanSearch = new BooleanSearch();
-        System.out.print(Arrays.toString(booleanSearch.search("Outlook Today")));
+            System.out.print(Arrays.toString(booleanSearch.search("A B AND (C OR (D NOT E)) AND F")));
         System.out.print((booleanSearch.search("Outlook Today")).length);
     }
 

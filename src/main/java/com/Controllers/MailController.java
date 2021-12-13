@@ -68,7 +68,7 @@ public class MailController {
         dropShadow.setRadius(15);
         dropShadow.setOffsetX(0);
         dropShadow.setOffsetY(0);
-        dropShadow.setSpread(0.1);
+        dropShadow.setSpread(0.01);
         mainBox.setEffect(dropShadow);
 
         this.info = info;
